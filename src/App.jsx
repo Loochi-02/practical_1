@@ -1,22 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+
+import HomePage from './pages/HomePage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ErrorPage from './pages/ErroPage'
+import Fruits from './pages/Fruits'
+import { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const loadScripts = (src, async = true) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.async = async;
+      script.onload = () => {
+        if (src.includes("jquery") && !window.jQuery) {
+          reject(new Error("jQuery not loaded"));
+        } else {
+          resolve();
+        }
+      };
+      script.onerror = (err) => reject(err);
+      document.body.appendChild(script);
+    });
+  };
 
+  useEffect(() => {
+    loadScripts("/js/jquery-3.4.1.min.js")
+      .then(() => loadScripts("/js/bootstrap.js"))
+      .then(() =>console.log("Scripts loaded successfully !"))
+      .catch((err) => console.error("Error loading script:", err));
+  }, []);
   return (
-    <>
-    <div>
-      <h6>jkjkjkjklS</h6>
-      <img src="public/aaa.jpg" alt="girl's pic" />
-      </div>
-      <div>
-      <h6>jkjkjkjklS</h6>
-      <img src="public/ddd.jpg" alt="girl's pic" />
-      </div>
-    </>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path='/HomePage' element={<HomePage/>}/>
+      <Route path='/Fruits' element={<Fruits/>}/>
+      <Route path='/Services' element={<Services/>}/>
+      <Route path='/Contact' element={<Contact/>}/>
+      <Route path='*' element={<ErrorPage/>}/>
+    </Routes>
+    <Footer/>
+
+    </BrowserRouter>
   )
 }
 
