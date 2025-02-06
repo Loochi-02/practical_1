@@ -2,7 +2,7 @@
 
 const HomePage = ()=>{
     return <>
-      {/* <div className="hero_area"> */}
+      <div className="hero_area">
 
      
      {/* slider section  */}
@@ -147,7 +147,7 @@ const HomePage = ()=>{
       </div>
     </section>
     {/* <!-- end slider section --> */}
-  {/* </div> */}
+  </div>
 
   {/* <!-- service section --> */}
 

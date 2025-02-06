@@ -2,6 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #000000;
   background-color: #ffffff;
+  /* border: 2px solid red; */
 }
 
 .layout_padding {
@@ -73,7 +74,8 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 98vh;
+  height: auto;
+  /* height: 98vh; */
   background-color: #f7f7f7;
 }
 
