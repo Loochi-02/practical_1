@@ -507,3 +507,116 @@ a:focus {
 }
 
 /* end footer section*/
+/* card page */
+
+#cardcard{
+  border-radius: 10px;
+}
+#cart{
+  margin-top: 30px;
+  display: flex;
+  /* border: 2px solid red; */
+}
+
+#cart-body{
+  border: 0.01px solid rgb(234, 238, 240);
+  background-color: white;
+  border-radius: 20px 20px 10px 10px ;
+}
+
+#card{
+  border-radius: 10px;
+  /* border: 2px solid black; */
+  box-shadow: 2px 2px 8px rgba(77, 65, 65, 0.2); /* Custom shadow */
+  background-color: #f7f7f7;
+}
+
+#visacard{
+  position: absolute;
+  top: 67px;
+  right: 30px;
+}
+
+#mastercard{
+  position: absolute;
+  top: 95px;
+  right: 30px;
+}
+
+#tabbycard{
+  position: absolute;
+  top: 128px;
+  right: 30px;
+}
+
+.leftColumn{
+  border:2px solid #000000;
+  display: flex;
+}
+
+.secondcardiv{
+  border: 2px solid blue;
+}
+
+#right-column{
+  border: 0.6px solid #c1c4c9;
+  border-radius: 8px;
+}
+
+.product-container {
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ddd; */
+            padding: 5px;
+            max-width: 900px;
+            margin: auto;
+            border-radius: 8px;
+            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            background: #fff;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            padding: 5px;
+            text-align: center;
+        }
+        .product-image {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            /* background-color: #ddd; */
+
+        }
+        .quantity-input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+        .delete-btn {
+            background: #d9534f;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .delete-btn:hover {
+            background: #c9302c;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+          .product-container {
+              flex-direction: column;
+              text-align: center;
+          }
+          .column {
+              width: 100%;
+          }
+          .product-image {
+              margin: 10px 0;
+          }
+      }

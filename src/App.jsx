@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Cart from './pages/cart';
 
 function App() {
   
@@ -43,6 +44,7 @@ function App() {
       <Route path='/Fruits' element={<Fruits/>}/>
       <Route path='/Services' element={<Services/>}/>
       <Route path='/Contact' element={<Contact/>}/>
+      <Route path='/Cart' element={<Cart/>}/>
       <Route path='*' element={<ErrorPage/>}/>
     </Routes>
     <Footer/>
