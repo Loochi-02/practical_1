@@ -511,6 +511,10 @@ a:focus {
 
 #cardcard{
   border-radius: 10px;
+  /* padding-top: 30px; */
+  /* align-items: center; */
+
+
 }
 #cart{
   margin-top: 30px;
@@ -519,9 +523,15 @@ a:focus {
 }
 
 #cart-body{
-  border: 0.01px solid rgb(234, 238, 240);
+  /* border: 0.01px solid rgb(234, 238, 240); */
   background-color: white;
   border-radius: 20px 20px 10px 10px ;
+}
+
+#card-body2{
+  /* font-size: 13px; */
+  border: 0.1px solid rgb(221, 216, 216);
+  border-radius: 10px;
 }
 
 #card{
@@ -533,13 +543,13 @@ a:focus {
 
 #visacard{
   position: absolute;
-  top: 67px;
+  top: 62px;
   right: 30px;
 }
 
 #mastercard{
   position: absolute;
-  top: 95px;
+  top: 94px;
   right: 30px;
 }
 
@@ -559,10 +569,18 @@ a:focus {
 }
 
 #right-column{
-  border: 0.6px solid #c1c4c9;
+  /* border: 0.6px solid #c1c4c9; */
   border-radius: 8px;
 }
 
+#right-column-2{
+  display: flex;
+}
+
+.subtotal{
+align-items: end;
+border: 2px solid red;
+}
 .product-container {
             display: flex;
             align-items: center;
@@ -606,7 +624,55 @@ a:focus {
         .delete-btn:hover {
             background: #c9302c;
         }
+        .order-container {
+          display: flex;
+          align-items: center;
+          /* border: 1px solid #ddd; */
+          padding: 5px;
+          max-width: 900px;
+          margin: auto;
+          border-radius: 8px;
+          /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+          background: #fff;
+          justify-content: space-between;
+      }
+      .column {
+          flex: 1;
+          padding: 5px;
 
+      }
+
+      .column4{
+        padding: 5px;
+        align-items: flex-end;  
+        border: 1px solid #d61f1f;
+      }
+
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin: 5px;      
+      }
+
+      .leftOne{
+        flex: 3;
+
+      }
+
+      .rightOne{
+        flex: 2;
+        text-align: right;
+      }
+
+      .checkout-button{
+        width: 100%;
+        background-color: #fc5d35;
+        margin-top: 15px;
+        color: white;
+        border: none;
+        height: 30px;
+      }
         /* Responsive */
         @media (max-width: 700px) {
           .product-container {

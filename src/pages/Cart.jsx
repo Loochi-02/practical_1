@@ -1,3 +1,6 @@
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Cart=() =>{
     return<>
    <section className="cart_section layout_padding">
@@ -13,6 +16,7 @@ const Cart=() =>{
             {/* Delivery Location */}
           <div className="card" id="cardcard">
             <div className="card-body">
+            <FontAwesomeIcon icon={faLocationDot} style={{color:"red",fontSize:"1.2rem"}} />
               <p className="card-text">
               Add an address so we can get tracking on the delivery 
               </p>
@@ -29,12 +33,12 @@ const Cart=() =>{
             <div className="card-body">
               <h5 className="card-title"><b>Choose how to pay</b></h5>
               <label className="flex items-center space-x-3">            
-                        <img 
+                        {/* <img 
                           src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" 
                           alt="Visa Card" 
                           style={{ height: "20px", width: "auto" }} 
-                        />
-                        <span>Visa **** 0912</span>
+                        /> */}
+                        <span>Visa</span>
                         <input type="radio" name="payment" className="w-6 h-6 rounded-full border-gray-300 checked:bg-blue-500" id="visacard"/>
 
                     </label><br/>
@@ -45,7 +49,7 @@ const Cart=() =>{
                          style={{ height: "20px", width: "auto" }} 
                         /> */}
 
-                        <span>Mastercard **** 0912</span>
+                        <span>Mastercard </span>
                         <input type="radio" name="payment" className="w-6 h-6 rounded-full border-gray-300 checked:bg-blue-500" id="mastercard"/>
                     </label><br/>
                     <label className="flex items-center space-x-3">
@@ -74,7 +78,7 @@ const Cart=() =>{
               <h6 className="card-title"><b>Cart</b></h6>
                 <div className="space-y-4 mt-4">
                     {/* <!-- Cart Item --> */}
-                    <div className="flex justify-between items-center p-4 border-b">
+                    <div className="flex justify-between items-center border-b">
                       {/* <div className="flex items-center gap-4">
                         <img src="images/orange.png" className="w-12 h-12 rounded" style={{ height: "50px", width: "auto" }} />
                         <div>
@@ -100,7 +104,7 @@ const Cart=() =>{
         <div className="column">
             <p><strong>Quantity:</strong> <input type="number" className="quantity-input" value="1" min="1"/></p>
             <p><strong>Total Price:</strong> $19.99</p>
-            <button className="delete-btn">Delete</button>
+            {/* <button className="delete-btn">Delete</button> */}
         </div>
 
         
@@ -133,7 +137,7 @@ const Cart=() =>{
         <div className="column">
             <p><strong>Quantity:</strong> <input type="number" className="quantity-input" value="1" min="1"/></p>
             <p><strong>Total Price:</strong> $19.99</p>
-            <button className="delete-btn">Delete</button>
+            {/* <button className="delete-btn">Delete</button> */}
         </div>
 
         
@@ -148,11 +152,63 @@ const Cart=() =>{
         </div>
 
         {/* right column */}
-        <div className="col-md-4 d-flex justify-content-center align-items-center" id="right-column">
-          <div className="fruit_img-box d-flex justify-content-center ">
-            <img src="images/grapes.png" alt="" className="" width="100px" />
-          </div>
+        <div className="col-md-4 d-flex" id="right-column">
+          {/* <div className="fruit_img-box">
+          <div className="order-container">
+          
+          <div className="column">
+            <p><strong>Subtotal</strong></p>
         </div>
+
+        <div className="column4">
+            <p>$19.99</p>
+        </div>
+
+
+            </div>
+          </div> */}
+
+{/* <div className="card" id="cardcard"> */}
+            <div className="card-body" id="card-body2">
+              <h5 className="card-title"><b>Your Order</b></h5>
+              
+                    <div className="row">
+                      <div className="leftOne">
+                        <p>Subtotal</p>
+                      </div>
+                      <div className="rightOne">
+                        <p>$19.99</p>
+                      </div>
+
+                    </div>
+
+                    <div className="row">
+                      <div className="leftOne">
+                        <p>Discount</p>
+                      </div>
+                      <div className="rightOne">
+                        <p>$29.99</p>
+                      </div>
+
+                    </div>
+                    <hr />
+
+                    <div className="row">
+                      <div className="leftOne">
+                        <p>Grand Total</p>
+                      </div>
+                      <div className="rightOne">
+                        <p>$29.99</p>
+                      </div>
+
+                    </div>
+
+                    <div>
+                      <button className="checkout-button">Checkout</button>
+                    </div>
+            </div>
+          </div>
+        {/* </div> */}
       </div>
        
 
