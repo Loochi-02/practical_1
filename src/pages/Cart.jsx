@@ -1,5 +1,5 @@
 import { faExclamation } from "@fortawesome/free-solid-svg-icons/faExclamation";
-// import { faGift } from "@fortawesome/free-solid-svg-icons/faGift";
+import { faGift } from "@fortawesome/free-solid-svg-icons/faGift";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -16,15 +16,18 @@ const Cart = () => {
                 {/* Delivery Location */}
                 <div className="card" id="cardcard">
                   <div className="card-body">
-                    <FontAwesomeIcon
-                      className="location-icon"
+                    {/* <FontAwesomeIcon
+                      className="location-icon d-flex align-items-center"
                       icon={faLocationDot}
                       style={{
                         color: "lightgray",
-                        fontSize: "3.1rem",
-                        marginLeft: 140,
+                        fontSize: "2.1rem",
+                        width: "25",
+                        height: "fit-content",
+                        alignItems: "center",
+                        position: "relative",
                       }}
-                    />
+                    /> */}
                     <p className="card-text">
                       Add an address so we can get tracking on the delivery
                     </p>
@@ -96,14 +99,14 @@ const Cart = () => {
                   <div className="card-body">
                     {/* <FontAwesomeIcon icon={faGifts}/> */}
 
-                    <FontAwesomeIcon
+                    {/* <FontAwesomeIcon
                       icon={faExclamation}
                       style={{
                         color: "black",
                         fontSize: "1.8rem",
                         marginLeft: 10,
                       }}
-                    />
+                    /> */}
 
                     {/* <FontAwesomeIcon icon={circle-faExclamation} style={{color: "black",fontSize:"2.1rem"}}/> */}
                     <h6 className="card-title">
@@ -214,32 +217,71 @@ const Cart = () => {
             {/* right column */}
             <div className="col-md-4 d-flex" id="right-column">
               {/* make a gift side*/}
-              <div className="giftside"></div>
-
-              {/* <div className="card" id="cardcard"> */}
-              <div className="card-body" id="card-body2">
+              <div
+                className="card-body"
+                style={{
+                  border: "0.1px solid rgb(221, 216, 216)",
+                  borderRadius: "10px",
+                }}
+              >
                 <h5 className="card-title">
                   <b>Your Order</b>
                 </h5>
-                <div className="make-gift">
-                  {/* <div className="row">
-                  <div className="column1">
-                  <FontAwesomeIcon icon={faExclamation} style={{color:"black",fontSize:"1.8rem",marginLeft: 10}} />
-                  <p>hii</p>
+                {/* <!-- Gift Toggle Section --> */}
+                <div className="d-flex flex-column flex-md-row align-items-center justify-content-between border p-3 rounded">
+                  <div className="d-flex align-items-center text-center text-md-start">
+                    <FontAwesomeIcon
+                      className="gift-icon d-flex align-items-center pr-3"
+                      icon={faGift}
+                      style={{
+                        color: "black",
+                        fontSize: "2.1rem",
+                        width: "25",
+                        height: "fit-content",
+                        alignItems: "center",
+                        position: "relative",
+                      }}
+                    />
+                    <div>
+                      <h6 className="mb-0">Make it a Gift</h6>
+                      <small className="text-muted">
+                        Wrap your items for{" "}
+                        <span className="text-primary">SAR 20</span>
+                      </small>
+                    </div>
                   </div>
-                  <div className="column2">
-                <h3>Make it a Gift</h3>
-                <p>Wrape your items for </p>
+                  <div className="mt-2 mt-md-0">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                    />
+                  </div>
                 </div>
-                <div className="column3">
-                        <button>hii</button>
+                <p className="text-muted mt-2 text-center text-md-start">
+                  All items will be wrapped in one box!{" "}
+                  <a href="#" className="text-primary">
+                    More info
+                  </a>
+                </p>
+
+                {/* <!-- Discount Code Section --> */}
+                <div className="mt-4 p-3 border rounded">
+                  <h6 className="fw-bold">Discount code</h6>
+                  <div className="d-flex flex-column flex-md-row justify-content-between align-items-center border p-2 rounded bg-light">
+                    <div className="d-flex align-items-center">
+                      <i className="bi bi-ticket-detailed text-primary fs-4 me-2"></i>
+                      <span className="fw-bold">PIXI20%</span>
+                    </div>
+                    <a href="#" className="text-danger fw-bold mt-2 mt-md-0">
+                      Remove
+                    </a>
+                  </div>
+                  <p className="text-success mt-2 text-center text-md-start">
+                    Coupon code is valid!
+                  </p>
                 </div>
-                </div> */}
-                  {/* <div className="row1" style={"display:flex"}>
-                  <div className="column1" style={"flex:2"}> */}
-                  {/* </div>
-                </div> */}
-                </div>
+                {/* <!-- Price Details --> */}
 
                 <div className="order">
                   <div className="row">
@@ -249,6 +291,11 @@ const Cart = () => {
                     <div className="rightOne">
                       <p>$19.99</p>
                     </div>
+                  </div>
+
+                  <div className="d-flex justify-content-between">
+                    <span>Shipping</span>
+                    <span className="text-success fw-bold">Free</span>
                   </div>
 
                   <div className="row">

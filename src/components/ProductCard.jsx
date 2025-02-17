@@ -17,7 +17,12 @@ const ProductCard = ({ product }) => {
   return (
     <div className="col-lg-4 col-xl-4 col-md-6 col-sm-12 pb-3 px-2">
       <div className="shop-product-card">
-        <div className="shop-product-bg"></div>
+        <div
+          className="shop-product-bg"
+          style={{
+            backgroundImage: `url(${product.image})`,
+          }}
+        ></div>
         <div className="shop-labels w-100 h-100 d-flex flex-column pl-4 pb-4 justify-content-end align-items-start">
           <h1>{product.name}</h1>
           <h2 className="mb-4">Price:Rs.{product.price}</h2>
@@ -44,6 +49,7 @@ ProductCard.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
   }).isRequired,
   // qty: PropTypes.number.isRequired,
   // increaseQty: PropTypes.func.isRequired,

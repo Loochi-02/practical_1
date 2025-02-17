@@ -1,10 +1,16 @@
 import ProductCard from "../components/ProductCard";
 
 const products = [
-  { id: 1, name: "noodles", price: 1000 },
-  { id: 2, name: "pizza", price: 200 },
-  { id: 3, name: "choco", price: 2000 },
-  { id: 4, name: "burgers", price: 500 },
+  { id: 1, name: "Day Cream", price: 3000, image: "/images/cream1.jpg" },
+  { id: 2, name: "Sunscreem", price: 2500, image: "/images/perfume.png" },
+  { id: 3, name: "Night Cream", price: 2000, image: "/images/cosmeticset.png" },
+  {
+    id: 4,
+    name: "Whitening Cream",
+    price: 500,
+    image: "/images/nightcream.jpg",
+  },
+  { id: 5, name: "Perfumes", price: 2000, image: "/images/perfume2.jpg" },
 ];
 
 const HomePage = () => {
@@ -28,8 +34,8 @@ const HomePage = () => {
                           <div className="slider_item-detail">
                             <div>
                               <h1>
-                                Welcome to <br />
-                                Our Fruits Shop
+                                Cosmetics made <br />
+                                honest for you
                               </h1>
                               <p>
                                 There are many variations of passages of Lorem
@@ -80,8 +86,8 @@ const HomePage = () => {
                           <div className="slider_item-detail">
                             <div>
                               <h1>
-                                Welcome to <br />
-                                Our Fruits Shop
+                                Skin Care made <br />
+                                simple for you
                               </h1>
                               <p>
                                 There are many variations of passages of Lorem
@@ -132,8 +138,8 @@ const HomePage = () => {
                           <div className="slider_item-detail">
                             <div>
                               <h1>
-                                Welcome to <br />
-                                Our Fruits Shop
+                                Hair Care made <br />
+                                natural for you
                               </h1>
                               <p>
                                 There are many variations of passages of Lorem
@@ -176,7 +182,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="custom_carousel-control">
+            {/* <div className="custom_carousel-control">
               <a
                 className="carousel-control-prev"
                 href="#carouselExampleControls"
@@ -193,12 +199,12 @@ const HomePage = () => {
               >
                 <span className="sr-only">Next</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
         {/* <!-- end slider section --> */}
       </div>
-      <div className="container">
+      <div className="container mt-5">
         <div className="row products-container">
           {products.map((item, index) => {
             return <ProductCard key={index} product={item} />;
@@ -222,7 +228,7 @@ const HomePage = () => {
                   alt="Card image cap"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Orange</h5>
+                  <h5 className="card-title">Skin</h5>
                   <p className="card-text">
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
@@ -238,7 +244,7 @@ const HomePage = () => {
                   alt="Card image cap"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Grapes</h5>
+                  <h5 className="card-title">Hair</h5>
                   <p className="card-text">
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
@@ -254,7 +260,7 @@ const HomePage = () => {
                   alt="Card image cap"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Gauva</h5>
+                  <h5 className="card-title">Makeup</h5>
                   <p className="card-text">
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
@@ -276,7 +282,7 @@ const HomePage = () => {
       {/* fruits section */}
       <section className="fruit_section">
         <div className="container">
-          <h2 className="custom_heading">Fresh Fruits</h2>
+          <h2 className="custom_heading">Our Beauty Blockbusters</h2>
           <p className="custom_heading-text">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have
@@ -301,7 +307,7 @@ const HomePage = () => {
             <div className="col-md-4 d-flex justify-content-center align-items-center">
               <div className="fruit_img-box d-flex justify-content-center align-items-center">
                 <img
-                  src="images/orange.png"
+                  src="images/perfume.png"
                   alt=""
                   className=""
                   width="250px"
@@ -327,12 +333,12 @@ const HomePage = () => {
               </div>
             </div>
             <div className="col-md-4 d-flex justify-content-center align-items-center">
-              <div className="fruit_img-box d-flex justify-content-center ">
+              <div className="fruit_img-box d-flex justify-content-center align-items-center">
                 <img
-                  src="images/grapes.png"
+                  src="images/lipstic.png"
                   alt=""
                   className=""
-                  width="100px"
+                  width="250px"
                 />
               </div>
             </div>
@@ -356,7 +362,12 @@ const HomePage = () => {
             </div>
             <div className="col-md-4 d-flex justify-content-center align-items-center">
               <div className="fruit_img-box d-flex justify-content-center align-items-center">
-                <img src="images/gauva.png" alt="" className="" width="250px" />
+                <img
+                  src="images/sunscreem.png"
+                  alt=""
+                  className=""
+                  width="250px"
+                />
               </div>
             </div>
           </div>
@@ -366,7 +377,7 @@ const HomePage = () => {
       {/* tasty section  */}
       <section className="tasty_section">
         <div className="container_fluid">
-          <h2>Very tasty fruits</h2>
+          <h2 style={{ fontSize: "6.2rem" }}>Find Your Perfect Match</h2>
         </div>
       </section>
       {/* end tasty section  */}
