@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
     <>
-      <section className="info_section layout_padding">
+      <section className="info_section layout_padding bg-">
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <h5>Fruits</h5>
+              <h5>Products</h5>
               <ul>
                 <li>randomised</li>
                 <li>words which</li>

@@ -1,6 +1,6 @@
-import { faExclamation } from "@fortawesome/free-solid-svg-icons/faExclamation";
+// import { faExclamation } from "@fortawesome/free-solid-svg-icons/faExclamation";
 import { faGift } from "@fortawesome/free-solid-svg-icons/faGift";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
+// import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = () => {

@@ -4,8 +4,8 @@ const Navbar = () => {
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container pt-3">
           <a className="navbar-brand" href="/">
-            <img src="images/logo.png" alt="" />
-            <span>Tropiko</span>
+            <img src="images/lipstick.png" alt="" />
+            <span>Thisu</span>
           </a>
           <button
             className="navbar-toggler"

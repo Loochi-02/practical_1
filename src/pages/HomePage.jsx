@@ -1,16 +1,37 @@
 import ProductCard from "../components/ProductCard";
 
 const products = [
-  { id: 1, name: "Day Cream", price: 3000, image: "/images/cream1.jpg" },
-  { id: 2, name: "Sunscreem", price: 2500, image: "/images/perfume.png" },
+  { id: 1, name: "Day Cream", price: 3000, image: "/images/cream-2.png" },
+  { id: 2, name: "Sunscream", price: 2500, image: "/images/perfume.png" },
   { id: 3, name: "Night Cream", price: 2000, image: "/images/cosmeticset.png" },
   {
     id: 4,
-    name: "Whitening Cream",
+    name: "Perfumes",
     price: 500,
-    image: "/images/nightcream.jpg",
+    image: "/images/perfume-1.png",
   },
   { id: 5, name: "Perfumes", price: 2000, image: "/images/perfume2.jpg" },
+];
+
+const carousel = [
+  {
+    title: "Glow Like Never Before",
+    description:
+      "Discover our premium skincare collection for radiant and healthy skin.",
+    image: "/images/hero-skincare.jpg",
+  },
+  {
+    title: "Unleash Your Beauty",
+    description:
+      "Elevate your makeup game with our high-quality, cruelty-free cosmetics.",
+    image: "/images/hero-makeup.jpg",
+  },
+  {
+    title: "Self-Care, Redefined",
+    description:
+      "Indulge in luxurious beauty essentials made for every skin type.",
+    image: "/images/hero-bg.png",
+  },
 ];
 
 const HomePage = () => {
@@ -25,6 +46,51 @@ const HomePage = () => {
             data-ride="carousel"
           >
             <div className="carousel-inner">
+              {/* {carousel.map((item, index) => {
+                return (
+                  <div className="carousel-item active" key={index}>
+                    <div className="slider_item-box">
+                      <div className="slider_item-container">
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-md-6">
+                              <div className="slider_item-detail">
+                                <div>
+                                  <h1>{item.title}</h1>
+                                  <p>{item.description}</p>
+                                  <div className="d-flex">
+                                    <a
+                                      href=""
+                                      className="text-uppercase custom_orange-btn mr-3"
+                                    >
+                                      Shop Now
+                                    </a>
+                                    <a
+                                      href=""
+                                      className="text-uppercase custom_dark-btn"
+                                    >
+                                      Contact Us
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="col-md-6">
+                              <div className="slider_img-box">
+                                <div>
+                                  <img src={item.image} alt="" className="" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div> */}
               <div className="carousel-item active">
                 <div className="slider_item-box">
                   <div className="slider_item-container">
@@ -33,16 +99,13 @@ const HomePage = () => {
                         <div className="col-md-6">
                           <div className="slider_item-detail">
                             <div>
-                              <h1>
-                                Cosmetics made <br />
-                                honest for you
-                              </h1>
+                              <h1>Glow Like Never Before</h1>
                               <p>
-                                There are many variations of passages of Lorem
-                                Ipsum available, but the majority have suffered
-                                alteration in some form, by injected humour, or
-                                randomised words which do not look even slightly
-                                believable.
+                                Experience the magic of radiant skin with our
+                                premium skincare range. Infused with nourishing
+                                ingredients, our products help hydrate, repair,
+                                and rejuvenate your skin for a youthful, healthy
+                                glow every day.
                               </p>
                               <div className="d-flex">
                                 <a
@@ -61,11 +124,12 @@ const HomePage = () => {
                             </div>
                           </div>
                         </div>
+
                         <div className="col-md-6">
                           <div className="slider_img-box">
                             <div>
                               <img
-                                src="images/slide-img.png"
+                                src="/images/hero-skincare-2.png"
                                 alt=""
                                 className=""
                               />
@@ -85,16 +149,13 @@ const HomePage = () => {
                         <div className="col-md-6">
                           <div className="slider_item-detail">
                             <div>
-                              <h1>
-                                Skin Care made <br />
-                                simple for you
-                              </h1>
+                              <h1>Unleash Your Beauty</h1>
                               <p>
-                                There are many variations of passages of Lorem
-                                Ipsum available, but the majority have suffered
-                                alteration in some form, by injected humour, or
-                                randomised words which do not look even slightly
-                                believable.
+                                Enhance your natural beauty with our
+                                high-quality, cruelty-free cosmetics. From bold
+                                lip colors to flawless foundations, our makeup
+                                collection is designed to boost confidence and
+                                complement every skin tone effortlessly.
                               </p>
                               <div className="d-flex">
                                 <a
@@ -113,11 +174,12 @@ const HomePage = () => {
                             </div>
                           </div>
                         </div>
+
                         <div className="col-md-6">
                           <div className="slider_img-box">
                             <div>
                               <img
-                                src="images/slide-img.png"
+                                src="/images/hero-makeup.png"
                                 alt=""
                                 className=""
                               />
@@ -137,16 +199,13 @@ const HomePage = () => {
                         <div className="col-md-6">
                           <div className="slider_item-detail">
                             <div>
-                              <h1>
-                                Hair Care made <br />
-                                natural for you
-                              </h1>
+                              <h1>Self-Care, Redefined</h1>
                               <p>
-                                There are many variations of passages of Lorem
-                                Ipsum available, but the majority have suffered
-                                alteration in some form, by injected humour, or
-                                randomised words which do not look even slightly
-                                believable.
+                                Pamper yourself with luxurious beauty essentials
+                                crafted for all skin types. Our skincare and
+                                body care products provide deep nourishment,
+                                relaxation, and rejuvenation, turning your
+                                self-care routine into an indulgent experience.
                               </p>
                               <div className="d-flex">
                                 <a
@@ -165,11 +224,12 @@ const HomePage = () => {
                             </div>
                           </div>
                         </div>
+
                         <div className="col-md-6">
                           <div className="slider_img-box">
                             <div>
                               <img
-                                src="images/slide-img.png"
+                                src="/images/hero-bg.png"
                                 alt=""
                                 className=""
                               />
@@ -204,13 +264,20 @@ const HomePage = () => {
         </section>
         {/* <!-- end slider section --> */}
       </div>
-      <div className="container mt-5">
-        <div className="row products-container">
-          {products.map((item, index) => {
-            return <ProductCard key={index} product={item} />;
-          })}
+      <section className="service_section layout_padding ">
+        <div className="container">
+          <h2 className="custom_heading">Featured Products</h2>
+          <p className="custom_heading-text">
+            Discover our top beauty essential for radiant skin, long-lasting
+            results, and effortless confidence daily!
+          </p>
+          <div className="row products-container layout_padding2">
+            {products.map((item, index) => {
+              return <ProductCard key={index} product={item} />;
+            })}
+          </div>
         </div>
-      </div>
+      </section>
       {/* <!-- service section --> */}
       <section className="service_section layout_padding ">
         <div className="container">
@@ -228,7 +295,7 @@ const HomePage = () => {
                   alt="Card image cap"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Skin</h5>
+                  <h5 className="card-title">Shipping</h5>
                   <p className="card-text">
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
@@ -244,7 +311,7 @@ const HomePage = () => {
                   alt="Card image cap"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Hair</h5>
+                  <h5 className="card-title">Online Payment</h5>
                   <p className="card-text">
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
@@ -377,7 +444,9 @@ const HomePage = () => {
       {/* tasty section  */}
       <section className="tasty_section">
         <div className="container_fluid">
-          <h2 style={{ fontSize: "6.2rem" }}>Find Your Perfect Match</h2>
+          <h2 style={{ fontSize: "4.5rem" }}>
+            Radiate Confidence, Glow Beautifully
+          </h2>
         </div>
       </section>
       {/* end tasty section  */}
@@ -386,8 +455,10 @@ const HomePage = () => {
         <div className="container">
           <h2 className="custom_heading">Testimonial</h2>
           <p className="custom_heading-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have
+            Read real reviews from our happy customers! <br />
+            See how our products have made a difference in their beauty
+            routines. Your feedback matters-join the conversation and share your
+            experience!
           </p>
           <div>
             <div
