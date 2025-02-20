@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Cart from "./pages/cart";
 import Checkout from "./pages/Checkout";
 import Shop from "./components/ProductCard";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   const loadScripts = (src, async = true) => {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/Services" element={<Services />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path="/Checkout" element={<Checkout />} />
       </Routes>
       <Shop />

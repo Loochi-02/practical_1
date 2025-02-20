@@ -65,7 +65,7 @@ const Cart = () => {
                          style={{ height: "20px", width: "auto" }} 
                         /> */}
 
-                      <span>Mastercard </span>
+                      <span>Mastercard</span>
                       <input
                         type="radio"
                         name="payment"
@@ -137,7 +137,7 @@ const Cart = () => {
                           <div className="column">
                             <img
                               className="product-image"
-                              src="images/orange.png"
+                              src="images/cream-product.png"
                               alt="Product"
                             />
                           </div>
@@ -176,7 +176,7 @@ const Cart = () => {
                           <div className="column">
                             <img
                               className="product-image"
-                              src="images/gauva.png"
+                              src="images/perfume.png"
                               alt="Product"
                             />
                           </div>
