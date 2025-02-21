@@ -347,7 +347,7 @@ const HomePage = () => {
       </section>
       {/* end service section */}
       {/* fruits section */}
-      <section className="fruit_section">
+      {/* <section className="fruit_section">
         <div className="container">
           <h2 className="custom_heading">Our Beauty Blockbusters</h2>
           <p className="custom_heading-text">
@@ -439,8 +439,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
       {/* end fruits section  */}
+
       {/* tasty section  */}
       <section className="tasty_section">
         <div className="container_fluid">

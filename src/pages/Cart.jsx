@@ -2,8 +2,18 @@
 import { faGift } from "@fortawesome/free-solid-svg-icons/faGift";
 // import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { useState } from "react";
 
 const Cart = () => {
+  // const [qty, setQuantity] = useState(1);
+
+  // const increaseQty = () => {
+  //   setQuantity(qty + 1);
+  // };
+
+  // const decreaseQty = () => {
+  //   setQuantity(qty > 0 ? qty - 1 : 0);
+  // };
   return (
     <>
       <section className="cart_section layout_padding">
@@ -14,7 +24,7 @@ const Cart = () => {
             <div className="col-md-8">
               <div className="card-deck">
                 {/* Delivery Location */}
-                <div className="card" id="cardcard">
+                <div className="card">
                   <div className="card-body">
                     {/* <FontAwesomeIcon
                       className="location-icon d-flex align-items-center"
@@ -38,7 +48,7 @@ const Cart = () => {
                 </div>
 
                 {/* payment methods */}
-                <div className="card" id="cardcard">
+                <div className="card">
                   <div className="card-body">
                     <h5 className="card-title">
                       <b>Choose how to pay</b>
@@ -54,7 +64,11 @@ const Cart = () => {
                         type="radio"
                         name="payment"
                         className="w-6 h-6 rounded-full border-gray-300 checked:bg-blue-500"
-                        id="visacard"
+                        style={{
+                          position: "absolute",
+                          top: "62px",
+                          right: "30px",
+                        }}
                       />
                     </label>
                     <br />
@@ -70,7 +84,11 @@ const Cart = () => {
                         type="radio"
                         name="payment"
                         className="w-6 h-6 rounded-full border-gray-300 checked:bg-blue-500"
-                        id="mastercard"
+                        style={{
+                          position: "absolute",
+                          top: "94px",
+                          right: "30px",
+                        }}
                       />
                     </label>
                     <br />
@@ -86,7 +104,11 @@ const Cart = () => {
                         type="radio"
                         name="payment"
                         className="w-6 h-6 rounded-full border-gray-300 checked:bg-blue-500"
-                        id="tabbycard"
+                        style={{
+                          position: "absolute",
+                          top: "128px",
+                          right: "30px",
+                        }}
                       />
                     </label>
                   </div>
@@ -94,8 +116,14 @@ const Cart = () => {
               </div>
 
               {/* cart section */}
-              <div className="card-deck" id="cart">
-                <div className="card" id="card">
+              <div
+                className="card-deck"
+                style={{
+                  marginTop: "30px",
+                  display: "flex",
+                }}
+              >
+                <div className="card rounded-3 shadow-lg" id="card">
                   <div className="card-body">
                     {/* <FontAwesomeIcon icon={faGifts}/> */}
 
@@ -117,7 +145,13 @@ const Cart = () => {
                       purches.
                     </p>
                   </div>
-                  <div className="card-body" id="cart-body">
+                  <div
+                    className="card-body"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "20px 20px 10px 10px",
+                    }}
+                  >
                     <h6 className="card-title">
                       <b>Cart</b>
                     </h6>
@@ -215,7 +249,7 @@ const Cart = () => {
             </div>
 
             {/* right column */}
-            <div className="col-md-4 d-flex" id="right-column">
+            <div className="col-md-4 d-flex" style={{ borderRadius: "8px" }}>
               {/* make a gift side*/}
               <div
                 className="card-body"

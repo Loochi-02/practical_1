@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ProductPage = [
   {
     image: "/images/lipstic.png",
@@ -136,6 +138,7 @@ const Fruits = () => {
           <p className="custom_heading-text">
             Glow up with our featured beauty products-top picks for you!
           </p>
+
           <div className="row">
             {ProductPage.map((produ, index) => {
               return (
@@ -150,20 +153,34 @@ const Fruits = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  <img
-                    src={produ.image}
-                    className="card-img-top"
-                    alt="..."
-                    style={{
-                      width: "16.9rem",
-                      height: "20rem",
-                      borderRadius: "10px 10px 0px 0px",
-                      backgroundColor: "#F9DEC9",
-                      // backgroundSize: "cover",
-                      // backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                    }}
-                  />
+                  <div className="div position-relative">
+                    <img
+                      src={produ.image}
+                      className="card-img-top"
+                      alt="..."
+                      style={{
+                        width: "16.9rem",
+                        height: "20rem",
+                        borderRadius: "10px 10px 0px 0px",
+                        backgroundColor: "#F9DEC9",
+                        zIndex: "2",
+                        border: "3px solid white",
+                        // backgroundSize: "cover",
+                        // backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                      }}
+                    />
+                    <Link
+                      to={`/produ/${produ.index}`}
+                      state={produ}
+                      style={{ marginLeft: "5rem" }}
+                    >
+                      quick view
+                    </Link>
+                    {/* <a href="http://localhost:5173/ProductDetails">
+                      quick view
+                    </a> */}
+                  </div>
                   <div className="card-body">
                     <h6 className="card-title" style={{ fontWeight: "bolder" }}>
                       {produ.title}
@@ -182,12 +199,13 @@ const Fruits = () => {
                       className="buy_now"
                       style={{
                         padding: "10px",
-                        marginLeft: "75px",
+                        marginLeft: "58px",
                         backgroundColor: "#a94a4a",
                         color: "white",
                       }}
                     >
-                      Buy now
+                      <a href="http://localhost:5173/Cart"></a>
+                      Add to Cart
                     </button>
                   </div>
                 </div>

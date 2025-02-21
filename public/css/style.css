@@ -536,46 +536,17 @@ a:focus {
 /* end footer section*/
 /* card page */
 
-#cardcard {
-  border-radius: 10px;
-  /* padding-top: 30px; */
-  /* align-items: center; */
-}
-#cart {
-  margin-top: 30px;
-  display: flex;
-  /* border: 2px solid red; */
-}
-
-#cart-body {
-  /* border: 0.01px solid rgb(234, 238, 240); */
-  background-color: white;
-  border-radius: 20px 20px 10px 10px;
-}
+/* #cardcard { */
+/* border-radius: 10px; */
+/* padding-top: 30px; */
+/* align-items: center; */
+/* }  */
 
 #card {
-  border-radius: 10px;
+  /* border-radius: 10px; */
   /* border: 2px solid black; */
   box-shadow: 2px 2px 8px rgba(77, 65, 65, 0.2); /* Custom shadow */
   background-color: #f7f7f7;
-}
-
-#visacard {
-  position: absolute;
-  top: 62px;
-  right: 30px;
-}
-
-#mastercard {
-  position: absolute;
-  top: 94px;
-  right: 30px;
-}
-
-#tabbycard {
-  position: absolute;
-  top: 128px;
-  right: 30px;
 }
 
 .leftColumn {
@@ -587,14 +558,9 @@ a:focus {
   border: 2px solid blue;
 }
 
-#right-column {
-  /* border: 0.6px solid #c1c4c9; */
-  border-radius: 8px;
-}
-
-#right-column-2 {
+/* #right-column-2 {
   display: flex;
-}
+} */
 
 .subtotal {
   align-items: end;
