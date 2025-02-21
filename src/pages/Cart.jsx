@@ -123,7 +123,7 @@ const Cart = () => {
                   display: "flex",
                 }}
               >
-                <div className="card rounded-3 shadow-lg" id="card">
+                <div className="card rounded-3" id="card">
                   <div className="card-body">
                     {/* <FontAwesomeIcon icon={faGifts}/> */}
 
